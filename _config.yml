@@ -4,6 +4,7 @@ description:        A Blog Theme by Start Bootstrap
 author:             Start Bootstrap
 baseurl:            "/gathavarma.github.io"
 url:                "https://plau51ble.github.io"
+remote_theme:       jekyll-theme-clean-blog
 
 # Social Profiles
 twitter_username:   SBootstrap
