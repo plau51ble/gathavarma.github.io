@@ -2,7 +2,7 @@ title:              Tidbits of Everything AI
 email:              gathaa@gmail.com
 description:        A Blog Where I Talk About AI Things Running Wild on The Internet.
 author:             Gatha Varma
-baseurl:            "/gathavarma.github.io"
+baseurl:            ""
 url:                "https://plau51ble.github.io"
 remote_theme:       jekyll-theme-clean-blog
 
