@@ -7,11 +7,12 @@ url:                "https://plau51ble.github.io"
 remote_theme:       jekyll-theme-clean-blog
 
 # Social Profiles
-twitter_username:   GathaVarma
-github_username:    plau51ble
+#github_username:    plau51ble
 #facebook_username:  StartBootstrap
 #instagram_username:  
 linkedin_username:  gatha-varma
+medium:             @gatha-varma
+twitter_username:   GathaVarma
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
