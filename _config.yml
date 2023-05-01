@@ -11,11 +11,11 @@ remote_theme:       jekyll-theme-clean-blog
 #facebook_username:  StartBootstrap
 #instagram_username:  
 linkedin_username:  gatha-varma
-medium_username:    gatha-varma
+medium:             gatha-varma
 twitter_username:   GathaVarma
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   G-9PDHF8BBYP # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
