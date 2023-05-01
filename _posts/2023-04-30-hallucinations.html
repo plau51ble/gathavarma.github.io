@@ -14,15 +14,17 @@ background: '/img/posts/01_hallucinations.jpg'
 
 <p>The hallucinated text gives the impression of being fluent and natural despite being unfaithful and nonsensical. It appears to be grounded in the provided context, although it is hard to specify or verify the existence of such contexts. Similar to psychological hallucination which is hard to tell apart from other “real” perceptions, hallucinated text is also hard to capture at first glance.</p>
 
-***
+<hr>
 <p>I have already listed some examples of hallucinations in Natural Language Generation (NLG) tasks.
   It also helps to understand the two categories of hallucinations before we delve into their causes.</p>
-<br>
-<p>An observed hallucination could be intrinsic or extrinsic.</p>
 
-<p>An intrinsic hallucination is a direct contradiction of the source. For example, </p>
-<p>The summarization of the paragraph: “The first vaccine for Ebola was approved by the FDA in 2019 in the US, five years after the initial outbreak in 2014. To produce the vaccine, scientists had to sequence the DNA of Ebola, then identify possible vaccines, and finally show successful clinical trials. Scientists say a vaccine for COVID-19 is unlikely to be ready this year, although clinical trials have already started.”
-  gave the output: “The first Ebola vaccine was approved in 2021”.</p>
+<p>An observed hallucination could either be intrinsic or extrinsic.</p>
+
+<p>An intrinsic hallucination is a direct contradiction of the source. </p>
+<p>For example, 
+  <br>The summarization of the paragraph:
+  <br>“The first vaccine for Ebola was approved by the FDA in 2019 in the US, five years after the initial outbreak in 2014. To produce the vaccine, scientists had to sequence the DNA of Ebola, then identify possible vaccines, and finally show successful clinical trials. Scientists say a vaccine for COVID-19 is unlikely to be ready this year, although clinical trials have already started.”
+  <br>gave the output: “The first Ebola vaccine was approved in 2021”.</p>
 ☛ This is in direct contradiction to the source.
 <br>
 <p>In contrast, an extrinsic hallucination can neither be contradicted nor supported by the source. 
@@ -30,14 +32,16 @@ background: '/img/posts/01_hallucinations.jpg'
   <br>
 This output may be correct but needs to be treated with caution nonetheless since it shows fidelity to an external source. Our definition of a fact exists in the paradigm of the source input, and unverified additional information should be treated as a hallucination.</p>
 
-***
+<hr>
 <h2>Common Hallucinogens of NLG</h2>
+<br>
 <h3>Hallucination Due to Data</h3>
 <p>Data is the most common culprit behind a deviating behavior of a model. However, at times models are trained to generate outputs that diverge from the source information.
   <br>
-  Here the cause can be condensed to the <b>source-reference divergence<b>. </p>
+  Here the cause can be condensed to the <b>source-reference divergence</b>. </p>
 
-Noe let me elaborate on the two sources of the said divergence
+Now let me elaborate on the two sources of the said divergence
+<br>
 <h4>Heuristic Data Collection </h4>
 <p>The collection of large-scale data suitable to train language models is usually heuristics-driven.
   <br>
