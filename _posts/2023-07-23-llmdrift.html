@@ -10,7 +10,7 @@ background: '/img/posts/01_hallucinations.jpg'
 
 <p style="padding: 10px; border: 2px solid orange;">TLDR:
   <br>Both GPT-3.5 and GPT-4 were posed with four tasks in the months of March and June 2023. Experiments revealed how the models that drive the extremely popular LLM service, ChatGPT, performed badly with the passage of time.
-  <br>✦ The comparatively easier task of solving math problems showed large performance drifts. GPT-4 followed the chain-of-thought instruction to get the right answer in March but gave the wrong answer while ignoring c-o-t. GPT-3.5 always followed the c-o-t earlier but generated the wrong answer; this issue was fixed in June.
+  <br>✦ The comparatively easier task of solving math problems showed large performance drifts. GPT-4 followed the chain-of-thought (c-o-t) instruction to get the right answer in March but gave the wrong answer while ignoring c-o-t. GPT-3.5 always followed the c-o-t earlier but generated the wrong answer; this issue was fixed in June.
   <br>✦ In March, both GPT-4 and GPT-3.5 were verbose and gave detailed explanations for why they did not answer a sensitive query. In June, the responses were short and lacked explanations.
   <br>✦ GPT-4 produced Python programs that were 20% longer but the executable fragments had dropped from 52.0% to 10.0%. GPT-3.5 also showed a drop in executable fragments from 22.0% to 2.0% over the three months.
   <br>✦ For visual reasoning, both GPT-4 and GPT-3.5 showed a slight improvement of 2% in the exact match rate from March to June. 
@@ -26,6 +26,7 @@ background: '/img/posts/01_hallucinations.jpg'
 <p>If your organization is already on the path or planning to add LLMs to the workflows then transparency and predictability are crucial. More so, it can prove to be costly to reproduce specific results from an LLM. Consistent monitoring of model behavior is crucial to understand if any updates aimed at improving some aspects actually hurt its capability in other dimensions.</p>
 <br>
 <hr>
+<br>
 <h2>ChatGPT Take the Test, Again</h2>
 <p>The latest experiment on which I have based this article evaluated diverse frequently-used tasks to evaluate LLMs. They were relatively objective and thus easy-to-evaluate tasks namely:
 <br>⇒ <b>Solving math problems</b> e.g. Is 17077 a prime number? Think step by step and then answer [Yes] or [No]
@@ -34,12 +35,11 @@ background: '/img/posts/01_hallucinations.jpg'
 <br>⇒ <b>Visual reasoning</b> e.g. Given a set of patterns, predict the next image
 </p>
 
-<hr>
 <h3>Evaluation Metrics</h3>
 <br>
 <p>The tasks were compared using one main performance metric and two common additional metrics for all tasks. The evaluation queries and responses recorded in March 2023 were pitted against those collected in June 2023. Also, one benchmark dataset cannot comprehensively cover all of the tasks, and therefore different datasets were used.</p>
 </p>Here is the list of metrics that were used to evaluate model performance</p>
- <table>
+ <table border="1">
   <tr>
     <th>Evaluation Task</th>
     <th>Main Performance Metric</th>
@@ -74,10 +74,13 @@ background: '/img/posts/01_hallucinations.jpg'
 </h2>
 <h3>Solving math problems- Chain-of-Thought Might Fail
 </h3>
+<p></p>
 
 <h3>Answering Sensitive Questions: Safer but Less Rationale</h3>
+<p></p>
 
 <h3>Code Generation: More Verbose and Less Directly Executable</h3>
-
+<p></p>
 
 <h3>Visual Reasoning: Marginal Improvements</h3>
+<p></p>
