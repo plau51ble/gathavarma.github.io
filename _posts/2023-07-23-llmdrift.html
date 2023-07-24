@@ -34,3 +34,36 @@ background: '/img/posts/01_hallucinations.jpg'
 <br>⇒ Code generation e.g.  Given an integer n>0, find the sum of all integers in the range [1, n] inclusive that are divisible by 3, 5, or 7
 <br>⇒ Visual reasoning e.g. Given a set of patterns, predict the next image
 </p>
+
+<hr>
+<h3>Evaluation Metrics</h3>
+<br>
+<p>The tasks were compared using one main performance metric and two common additional metrics for all tasks. The evaluation queries and responses recorded in the March 2023 were pitted against those collected in June 2023. Also, one benchmark dataset cannot comprehensively cover all of the tasks, and therefore different datasets were used.</p>
+</p>Here is the list of metrics that were used to evaluate model performance</p>
+ <table>
+  <tr>
+    <th>Evaluation Task</th>
+    <th>Main Performance Metric</th>
+  </tr>
+  <tr>
+    <td>Solving math problems</td>
+    <td>Accuracy</td>
+  </tr>
+  <tr>
+    <td>Answering sensitive questions</td>
+    <td>Answer rate = the frequency of an LLM service directly answering a question</td>
+  </tr>
+   <tr>
+     <td>Code generation</td>
+     <td>The fraction of generated codes directly executable in a programming environment and capable of passing unit tests</td>
+   </tr>
+   <tr>
+     <td>Visual reasoning</td>
+     <td>Exact match, whether the generated visual objects exactly matches the ground truth</td>
+   </tr>
+</table> 
+<br>
+<p>Additional common metrics used to evaluate all of the tasks were
+<br>⇒ Verbosity: The length of generation
+<br>⇒ Overlap: For the same prompt given to two versions of the same LLM, the extent of match between the extracted answers.
+</p>
