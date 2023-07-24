@@ -10,7 +10,7 @@ background: '/img/posts/01_hallucinations.jpg'
 
 <p style="padding: 10px; border: 2px solid orange;">TLDR:
   <br>Both GPT-3.5 and GPT-4 were posed with four tasks in the months of March and June 2023. Experiments revealed how the models that drive the extremely popular LLM service, ChatGPT, performed badly with the passage of time.
-  <br>✦ The comparatively easier task of solving math problems showed large performance drifts. GPT-4 followed the chain-of-thought (c-o-t) instruction to get the right answer in March but gave the wrong answer while ignoring c-o-t. GPT-3.5 always followed the c-o-t earlier but generated the wrong answer; this issue was fixed in June.
+  <br>✦ The comparatively easier task of solving math problems showed large performance drifts. GPT-4 followed the chain-of-thought (CoT) instruction to get the right answer in March but gave the wrong answer while ignoring CoT. GPT-3.5 always followed the CoT earlier but generated the wrong answer; this issue was fixed in June.
   <br>✦ In March, both GPT-4 and GPT-3.5 were verbose and gave detailed explanations for why they did not answer a sensitive query. In June, the responses were short and lacked explanations.
   <br>✦ GPT-4 produced Python programs that were 20% longer but the executable fragments had dropped from 52.0% to 10.0%. GPT-3.5 also showed a drop in executable fragments from 22.0% to 2.0% over the three months.
   <br>✦ For visual reasoning, both GPT-4 and GPT-3.5 showed a slight improvement of 2% in the exact match rate from March to June. 
@@ -85,6 +85,27 @@ background: '/img/posts/01_hallucinations.jpg'
 </p>
 <br>⬇️ The answer overlap between the March and June versions was also small.
 
+<p>
+  For query: "Is 17077 a prime number? Think step by step and then answer [Yes] or [No]."
+  <br>Chain-of-thought (CoT) could be like this:
+  <br>* Is the {input} an even number?
+  <br>* Finding the {input}’s square root
+  <br>* Getting all prime numbers less than {input} = {lower_primes}
+  <br>* Checking if {input} is divisible by any of {lower_primes}
+</p>
+<p>GPT-4’s March version followed the CoT instruction well and gave the correct answer. However, the CoT did not work for the June version. The output did not list steps or the correct answer.
+</p>
+<p>
+  GPT-4’s March version first gave the wrong answer and then listed the steps, which was an incorrect response nonetheless. This bug was fixed as part of an update that resulted in a response with reasoning as well as a correct answer.
+</p>
+<img class="img-fluid" src="https://raw.githubusercontent.com/plau51ble/gathavarma.github.io/2615112918250d27c47fb193b381dc20b9f4446a/img/posts/math_drift.png
+" alt="Solving Maths Failure">
+
+<p>
+One of the emerging countermeasures for CoT failure is a self-verification or self-consistency check.</p>
+<p>It can be safely said that at least one mistake among the intermediate reasoning steps can cause LLMs to produce erroneous final answers.</p>
+<p>Integrating the verification process into the deductive reasoning stages empowers language models to carry out self-verification in a step-by-step manner.</p>
+<p>Strategies like voting or sampling can be used to construct a verified or confident reasoning path. Though such approaches might prove to be computationally expensive.</p>
 <h3>Answering Sensitive Questions: Safer but Less Rationale</h3>
 <p></p>
 
@@ -93,3 +114,9 @@ background: '/img/posts/01_hallucinations.jpg'
 
 <h3>Visual Reasoning: Marginal Improvements</h3>
 <p></p>
+
+<b>Source</b>:
+<br>* <a href="https://arxiv.org/abs/2307.09009">How Is ChatGPT’s Behavior Changing over Time?</a>
+<br>* <a href="https://research.google/pubs/pub52081/">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a>
+<br>* <a href="https://www.researchgate.net/publication/371347334_Deductive_Verification_of_Chain-of-Thought_Reasoning">Deductive Verification of Chain-of-Thought Reasoning</a>
+ 
