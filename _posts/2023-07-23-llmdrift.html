@@ -1,0 +1,18 @@
+---
+layout: post
+title: "LLMDrift"
+subtitle: "What are the various types of drift that plague biggies like GPT-3.5 & GPT-4?"
+date: 2023-04-30 08:15:15 -0400
+background: '/img/posts/01_hallucinations.jpg'
+---
+
+<blockquote class="blockquote">It’s still magic even if you know how it’s done. – Terry Pratchett</blockquote>
+
+<p style="padding: 10px; border: 2px solid orange;">A TLDR of this post:
+  <br>Both GPT-3.5 and GPT-4 were posed with four tasks in the months of March and June 2023. This experiment revealed how the models that drive the extremely popular LLM service, CHATGPT, performed badly with the passage of time.
+  <br>✦ The comparatively easier task of solving math problems showed large performance drifts. An example query and corresponding responses showed that GPT-4 followed the chain-of-thought instruction to get the right answer in March, but ignored it in June with the wrong answer. In March, GPT-3.5 always followed the chain-of-thought, but insisted on generating a wrong answer ([No] ) but this issue was largely fixed in June.
+  <br>✦ GPT-4 answered fewer sensitive questions from March to June while GPT-3.5 answered slightly more. While in March, both GPT-4 and GPT-3.5 were verbose and gave detailed explanations for why they did not answer the query. In June, the responses were limited to apologies and lacked explanations.
+  <br>✦ For code generation evaluated from March to June, GPT-4 produced Python programs that were 20% longer and the executable fragments had dropped from 52.0% to 10.0%. The drop in executable fragments was also large for GPT-3.5 varying from 22.0% to 2.0% over the three months.
+  <br>✦ For visual reasoning, both GPT-4 and GPT-3.5 showed a slight improvement of 2% in the exact match rate from March to June. Also, the generation length remained roughly the same and the generation did not change for about 90% of the visual reasoning queries.
+</p>
+<hr>
