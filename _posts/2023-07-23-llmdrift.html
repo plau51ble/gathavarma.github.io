@@ -130,11 +130,26 @@ The associated rationales improve the interpretability of model predictions for 
 
 <br>
 <h3>Code Generation: More Verbose and Less Directly Executable</h3>
-<p></p>
+<p>
+  <br>⬇️ For both models, the number of directly executable generations dropped from March to June. Over 50% of generations by GPT-4 were directly executable in March, but only 10% in June.
+The trend was similar for GPT-3.5
+  <br>⬇️ There was also a small increase in verbosity for both models.
+</p>
+<img class="img-fluid" src="https://raw.githubusercontent.com/plau51ble/gathavarma.github.io/2615112918250d27c47fb193b381dc20b9f4446a/img/posts/code_drift.png
+" alt="Code Generation Failure">
+
+<p>
+<font size="5"><b>T</font></b>he increased verbosity could be attributed to the addition of more non-code text such as comments to the code generations.
+The recent observation of text: “‘python and “‘ before and after the code snippet can also make the code difficult to read by pipelines.</p>
 
 <br>
 <h3>Visual Reasoning: Marginal Improvements</h3>
-<p></p>
+<p>
+  ⬆️For both GPT-4 and GPT-3.5, there was a 2% improvement of the exact match rate from March to June. The generation length remained roughly the
+same.
+</p>
+<img class="img-fluid" src="https://raw.githubusercontent.com/plau51ble/gathavarma.github.io/2615112918250d27c47fb193b381dc20b9f4446a/img/posts/visual_drift.png
+" alt="Visual Reasoning">
 
 <b>Sources</b>:
 <br>* <a href="https://arxiv.org/abs/2307.09009">How Is ChatGPT’s Behavior Changing over Time?</a>
